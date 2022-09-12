@@ -4,22 +4,17 @@
 <head>
     <meta charset="utf-8">
     <title>Edit Page</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <header>
+    <div class="header">
         <h1>Edit <%= games.title %>'s Info</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/games">Games Index</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    </div>
+    <div class="nav">
+    <a href="/">Home</a>
+    <a href="/games">Games Index</a>
+    </div>
     <main>
         <h2>Game Attributes:</h2>
         <form action="/games/<%= games._id %>?_method=PUT" method="POST">

@@ -4,29 +4,29 @@
 <head>
     <meta charset="utf-8">
     <title>Game Store Page</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <header>
+
+    <div class="header">
         <h1>List of Games</h1>
-        <nav>
-            <ul>
+    </div>
+    <div class="nav">
+        <a href="/">Home</a>
+    </div>
+    <ul>
+        <% for(let i=0; i < games.length; i++){ %>
+            <li>
+                <a href="/games/<%= games[i]._id %>">
+                    <%= games[i].title %>
+                </a>
+            </li>
+            <% } %>
                 <li>
-                    <a href="/">Home</a>
+                    <a href="/games/new">Add a New Game</a>
                 </li>
-                <% for(let i=0; i < games.length; i++){ %>
-                    <li>
-                        <a href="/games/<%= games[i]._id %>">
-                            <%= games[i].title %>
-                        </a>
-                    </li>
-                    <% } %>
-                        <li>
-                            <a href="/games/new">Add a New Game</a>
-                        </li>
-            </ul>
-        </nav>
-    </header>
+    </ul>
 </body>
 
 </html>
