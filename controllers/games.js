@@ -39,7 +39,11 @@ router.put('/:id', (req, res)=>{
 });
 
 //CREATE
-
+router.post('/',(req,res)=>{
+	Game.create(req.body, (err, createdGame)=>{
+		res.redirect('/games')
+	})
+})
 
 //EDIT
 router.get('/:id/edit', (req, res)=>{
