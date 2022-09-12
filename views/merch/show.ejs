@@ -32,7 +32,10 @@
         </section>
     </main>
     <footer>
-
+        <form action="/merch/<%= merch._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete Game" />
+        </form>
+        <a href="/merch/<%= merch._id %>/edit">Edit Merch</a>
     </footer>
 </body>
 

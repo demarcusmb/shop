@@ -48,7 +48,13 @@ router.post('/',(req,res)=>{
 
 
 //EDIT
-
+router.get('/:id/edit', (req, res)=>{
+	Merch.findById(req.params.id, (err, foundMerch)=>{
+		res.render('merch/edit.ejs', {
+			merch: foundMerch
+		});
+	});
+});
 
 
 //SHOW
