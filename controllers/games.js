@@ -1,5 +1,7 @@
 // DEPENDENCIES
-const express = require('express')
+const { application } = require('express');
+const express = require('express');
+const { findById } = require('../models/game.js');
 const router = express.Router()
 const Game = require('../models/game.js');
 const gameSeed = require('../models/gameseed.js');
@@ -45,7 +47,13 @@ router.put('/:id', (req, res)=>{
 
 
 //EDIT
-
+router.get('/:id/edit', (req, res)=>{
+	Game.findById(req.params.id, (err, foundGames)=>{
+		res.render('games/show.ejs', {
+			games: foundGames
+		});
+	});
+});
 
 
 //SHOW
