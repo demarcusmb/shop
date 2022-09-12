@@ -3,6 +3,7 @@ const express = require('express');
 const { findById } = require('../models/merch.js');
 const router = express.Router()
 const Merch = require('../models/merch.js');
+const merchSeed = require('../models/merchseed.js');
 
 // SEED
 router.get('/seed', (req, res)=>{
