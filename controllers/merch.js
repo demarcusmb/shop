@@ -26,12 +26,25 @@ router.get('/', (req, res) => {
 
 
 //DELETE
-
+router.delete('/:id', (req,res)=>{
+	Merch.findByIdAndRemove(req.params.id, ()=>{
+		res.redirect('/merch');
+	});
+});
 
 //UPDATE
-
+router.put('/:id', (req, res)=>{
+	Merch.findByIdAndUpdate(req.params.id, req.body, () => {
+			res.redirect(`/merch/${req.params.id}`)
+		});
+});
 
 //CREATE
+router.post('/',(req,res)=>{
+	Merch.create(req.body, (err, createdMerch)=>{
+		res.redirect('/merch')
+	})
+})
 
 
 //EDIT
