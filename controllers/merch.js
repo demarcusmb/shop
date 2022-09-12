@@ -1,13 +1,14 @@
 // DEPENDENCIES
-const express = require('express')
-
+const express = require('express');
+const { findById } = require('../models/game.js');
 const router = express.Router()
+const Game = require('../models/game.js');
 
 //INDEX
 router.get('/', (req, res) => {
-	Game.find({}, (err, foundGames) => {
+	Game.find({}, (err, foundMerch) => {
 		res.render('merch/index.ejs', {
-			games: foundGames
+			merch: foundMerch
 		});
 	});
 });

@@ -1,5 +1,4 @@
 // DEPENDENCIES
-const { application } = require('express');
 const express = require('express');
 const { findById } = require('../models/game.js');
 const router = express.Router()
