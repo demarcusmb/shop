@@ -29,7 +29,11 @@ router.get('/new', (req, res)=>{
 
 
 //DELETE
-
+router.delete('/:id', (req,res)=>{
+	Game.findByIdAndRemove(req.params.id, ()=>{
+		res.redirect('/games');
+	});
+});
 
 //UPDATE
 router.put('/:id', (req, res)=>{
