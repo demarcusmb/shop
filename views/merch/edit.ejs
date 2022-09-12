@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Edit Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Edit <%= merch.name %>'s Info</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/merch">Merch Index</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Game Attributes:</h2>
+        <form action="/merch/<%= merch._id %>?_method=PUT" method="POST">
+            <input type="text" name="name" value="<%= merch.name %>" /><br>
+            <input type="text" name="img" value="<%= merch.img%>" /><br>
+            <input type="number" name="price" value="<%= merch.price %>" /><br>
+            <input type="number" name="qty" value="<%= merch.qty %>" /><br>
+            <input type="submit" value="Update merch" />
+        </form>
+    </main>
+</body>
+
+</html>
