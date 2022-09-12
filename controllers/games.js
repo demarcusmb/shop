@@ -38,8 +38,8 @@ router.put('/:id', (req, res)=>{
 		(error, updatedGame)=>{
 			res.redirect(`/games/${req.params.id}`)
 		}
-	)
-})
+	);
+});
 
 //CREATE
 
@@ -49,6 +49,12 @@ router.put('/:id', (req, res)=>{
 
 
 //SHOW
-
+router.get('/:id', (req,res)=> {
+	Game.findById(req.params.id, (err,foundGames)=>{
+		res.render('show.ejs', {
+			games: foundGames,
+		});
+	});
+});
 
 module.exports = router
