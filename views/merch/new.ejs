@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Express Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1>Create an New Merchandise</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/merch">Merch Index</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/merch" method="POST">
+            Merchandise name: <input type="text" name="title" /><br>
+            Merchandise Image: <input type="text" name="img" /><br>
+            Merchandise Price :<input type="number" name="price"  /><br>
+            Merchandise Quantity Available<input type="number" name="qty"  /><br>
+            <input type="submit" value="Update Merch" />
+        </form>
+    </main>
+</body>
+
+</html>
