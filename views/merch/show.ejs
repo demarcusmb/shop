@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Express Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1>Show Page for <%= merch.name%>
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/merch">Merch Index</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Merch Info</h2>
+            Title: <%= merch.name %> <br>
+            <img src="<%= merch.img %>"> <br>
+            Description: <%= merch.description%> <br>
+            Price: $<%= merch.price%> <br>
+            Quantity Available: <%= merch.qty%>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
