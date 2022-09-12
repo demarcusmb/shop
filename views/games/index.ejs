@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Game Store Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>List of Games</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <% for(let i=0; i < games.length; i++){ %>
+                    <li>
+                        <a href="/games/<%= games[i]._id %>">
+                            <%= games[i].name %>
+                        </a>
+                    </li>
+                    <% } %>
+                        <li>
+                            <a href="/games/new">Add a New Game</a>
+                        </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
