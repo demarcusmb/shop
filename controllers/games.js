@@ -31,16 +31,9 @@ router.get('/', (req, res) => {
 
 //UPDATE
 router.put('/:id', (req, res)=>{
-	Game.findByIdAndUpdate(
-		req.params.id,
-		req.body,
-		{
-			new:true
-		},
-		(error, updatedGame)=>{
+	Game.findByIdAndUpdate(req.params.id, req.body, () => {
 			res.redirect(`/games/${req.params.id}`)
-		}
-	);
+		});
 });
 
 //CREATE
@@ -49,7 +42,7 @@ router.put('/:id', (req, res)=>{
 //EDIT
 router.get('/:id/edit', (req, res)=>{
 	Game.findById(req.params.id, (err, foundGames)=>{
-		res.render('games/show.ejs', {
+		res.render('games/edit.ejs', {
 			games: foundGames
 		});
 	});
