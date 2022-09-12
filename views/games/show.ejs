@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Express Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1>Show Page for <%= games.title%>
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/games">Game Index</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Game Info</h2>
+            Title: <%= games.title %> <br>
+            <img src="<%= games.img %>"> <br>
+            Description: <%= games.description%> <br>
+            Price: $<%= games.price%> <br>
+            Quantity Available: <%= games.qty%>
+        </section>
+    </main>
+</body>
+
+</html>
