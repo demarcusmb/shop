@@ -8,36 +8,37 @@
 </head>
 
 <body>
-    <header>
-        <h1>Show Page for <%= merch.name%>
+    <div class="header">
+        <h1>
+            Show Page for <%= merch.name%>
         </h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/merch">Merch Index</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Merch Info</h2>
-            Title: <%= merch.name %> <br>
-            <img src="<%= merch.img %>"> <br>
-            Description: <%= merch.description%> <br>
-            Price: $<%= merch.price%> <br>
-            Quantity Available: <%= merch.qty%>
-        </section>
-    </main>
-    <footer>
+    </div>
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/merch">Merch Index</a>
+    </div>
+    <div class="maincontent">
+        <div class="products">
+            <div><h2>Merch Info</h2></div>
+            <div>Title: <%= merch.name %></div>
+            <div><img src="<%= merch.img %>"></div>
+            <div>Description: <%= merch.description%></div>
+            <div>Price: $<%= merch.price%></div>
+            <div>Quantity Available: <%= merch.qty%></div>         
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
         <form action="/merch/<%= merch._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Game" />
         </form>
-        <a href="/merch/<%= merch._id %>/edit">Edit Merch</a>
-    </footer>
+        <div class="editbtn">
+            <a href="/merch/<%= merch._id %>/edit"><input type="submit" value="Edit This Merch"> </a>
+        </div>
+    </div>
 </body>
 
 </html>

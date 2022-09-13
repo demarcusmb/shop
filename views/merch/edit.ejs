@@ -8,20 +8,14 @@
 </head>
 
 <body>
-    <header>
-        <h1>Edit <%= merch.name %>'s Info</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/merch">Merch Index</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+    <div class="header">
+        <h1>Edit <%= merch.name %> Info</h1>
+    </div>
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/merch">Merch Index</a>
+    </div>
+    <div class="forms">
         <h2>Game Attributes:</h2>
         <form action="/merch/<%= merch._id %>?_method=PUT" method="POST">
             <input type="text" name="name" value="<%= merch.name %>" /><br>
@@ -30,7 +24,7 @@
             <input type="number" name="qty" value="<%= merch.qty %>" /><br>
             <input type="submit" value="Update merch" />
         </form>
-    </main>
+    </div>
 </body>
 
 </html>

@@ -15,20 +15,23 @@
     <a href="/">Home</a>
     <a href="/games">Games Index</a>
     </div>
-    <main>
-        <h2>Game Attributes:</h2>
+    <div class="forms">
+        <div>
+          <h2>Game Attributes:</h2>  
+        </div>
+        <div>
         <form action="/games/<%= games._id %>?_method=PUT" method="POST">
-            <input type="text" name="title" value="<%= games.title %>" /><br>
-            <input type="text" name="img" value="<%= games.img%>" /><br>
-            <input type="text" name="description" value="<%= games.description %>" /><br>
-            <input type="text" name="developer" value="<%= games.developer %>" /><br>
-            <input type="text" name="genres" value="<%= games.genres %>" /><br>
-            <input type="text" name="platforms" value="<%= games.platforms %>" /><br>
-            <input type="number" name="price" value="<%= games.price %>" /><br>
-            <input type="number" name="qty" value="<%= games.qty %>" /><br>
+            Game Title: <input type="text" name="title" value="<%= games.title %>" /><br>
+            Game Image: <input type="text" name="img" value="<%= games.img%>" /><br>
+            Game Description: <input type="text" name="description" value="<%= games.description %>" /><br>
+            Game Developer: <input type="text" name="developer" value="<%= games.developer %>" /><br>
+            Game Generes: <input type="text" name="genres" value="<%= games.genres %>" /><br>
+            Game Available Platforms: <input type="text" name="platforms" value="<%= games.platforms %>" /><br>
+            Game Price: <input type="number" name="price" value="<%= games.price %>" /><br>
+            Game Quantity Available: <input type="number" name="qty" value="<%= games.qty %>" /><br>
             <input type="submit" value="Update Games" />
-        </form>
-    </main>
+            </div>
+        </div>
 </body>
 
 </html>

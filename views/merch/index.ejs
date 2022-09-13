@@ -8,26 +8,32 @@
 </head>
 
 <body>
-    <header>
+    <div class="header">
         <h1>List of Merchandise</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <% for(let i=0; i < merch.length; i++){ %>
-                    <li>
-                        <a href="/merch/<%= merch[i]._id %>">
-                            <%= merch[i].name %>
-                        </a>
-                    </li>
-                    <% } %>
-                    <li>
-                        <a href="/merch/new">Add a New Merchandise</a>
-                    </li>
-            </ul>
-        </nav>
-    </header>
+    </div>
+    <div class="nav">
+        <a href="/">Home</a>
+    </div>
+    <div class="row">
+        <div class="side">
+            CONTENT
+        </div>
+        <div class="maincontent">
+            <% merch.forEach(merch=>{ %>
+                <div class="products">
+                    <a href="/merch/<%= merch._id %>">
+                        <%= merch.name %>
+                    </a><br>
+                    <img src="<%= merch.img %>">
+                    Price: $<%= merch.price %><br>
+                        Quantity: <%= merch.qty %>
+                </div>
+                <% }) %>
+        </div>
+    </div>
 </body>
+<div class="footer">
+    <a href="/merch/new">Add a New Merchandise</a>
+</div>
 
 </html>

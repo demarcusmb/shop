@@ -8,28 +8,22 @@
 </head>
 
 <body>
-    <header>
+    <div class="header">
         <h1>Create an New Merchandise</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/merch">Merch Index</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+    </div>
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/merch">Merch Index</a>
+    </div>
+    <div class="forms">
         <form action="/merch" method="POST">
             Merchandise name: <input type="text" name="name" /><br>
             Merchandise Image: <input type="text" name="img" /><br>
-            Merchandise Price :<input type="number" name="price"  /><br>
-            Merchandise Quantity Available<input type="number" name="qty"  /><br>
+            Merchandise Price :<input type="number" name="price" /><br>
+            Merchandise Quantity Available<input type="number" name="qty" /><br>
             <input type="submit" value="Update Merch" />
         </form>
-    </main>
+    </div>
 </body>
 
 </html>

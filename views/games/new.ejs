@@ -12,22 +12,23 @@
         <h1>Create an New Game</h1>
     </div>
     <div class="nav">
-    <a href="/">Home</a>
-    <a href="/games">Game Index</a>
+        <a href="/">Home</a>
+        <a href="/games">Game Index</a>
     </div>
-    <main>
+    <div class="forms">
         <form action="/games" method="POST">
-            Game Title: <input type="text" name="title" /><br>
-            Game Image: <input type="text" name="img" /><br>
-            Game Description: <input type="text" name="description"  /><br>
-            Game Developer: <input type="text" name="developer"  /><br>
-            Game Genres: <input type="text" name="genres"  /><br>
-            Game Available Platforms: <input type="text" name="platforms"  /><br>
-            Game Price :<input type="number" name="price"  /><br>
-            Game Quantity Available<input type="number" name="qty"  /><br>
+            Game Title: <input type="text" name="title" placeholder="Enter Game's Title Here" /><br>
+            Game Image: <input type="text" name="img" placeholder="Enter Game's Image Link" /><br>
+            Game Description: <input type="text" name="description" placeholder="Enter Game's Description Here" /><br>
+            Game Developer: <input type="text" name="developer" placeholder="Enter Game's Developer Here" /><br>
+            Game Genres: <input type="text" name="genres" placeholder="Enter Game's Genres Here" /><br>
+            Game Available Platforms: <input type="text" name="platforms"
+                placeholder="Enter Game's Available Platforms Here" /><br>
+            Game Price:<input type="number" name="price" placeholder="Enter Game's Price Here" /><br>
+            Game Quantity Available:<input type="number" name="qty" placeholder="Enter Game's Quantity Here" /><br>
             <input type="submit" value="Update Games" />
         </form>
-    </main>
+    </div>
 </body>
 
 </html>

@@ -15,25 +15,32 @@
             <a href="/">Home</a>
             <a href="/games">Game Index</a>
         </div>
-    <main>
-        <section>
-            <h2>Game Info</h2>
-            Title: <%= games.title %> <br>
-            <img src="<%= games.img %>"> <br>
-            Description: <%= games.description%> <br>
-            Developer: <%= games.developer%> <br>
-            Genres: <%= games.genres%> <br>
-            Platforms: <%= games.platforms%> <br>
-            Price: $<%= games.price%> <br>
-            Quantity Available: <%= games.qty%>
-        </section>
-    </main>
-    <footer>
+        <div class="pt">
+            <h3>Information</h3> 
+        </div>
+
+            <div class="row">
+            <div class="maincontent">
+                <div class="products">
+                    <div>Title: <%= games.title %></div>
+                    <div><img src="<%= games.img %>"></div>
+                    <div>Description: <%= games.description%></div>
+                    <div>Developer: <%= games.developer%></div>
+                    <div>Genres: <%= games.genres%></div>
+                    <div>Platforms: <%= games.platforms%></div>
+                    <div>Price: $<%= games.price%></div>
+                    <div>Quantity Available: <%= games.qty%></div>
+            </div>
+            </div>
+            </div>
+
+    <div class="footer">
         <form action="/games/<%= games._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Game" />
-        </form>
-        <a href="/games/<%= games._id %>/edit">Edit Game</a>
-    </footer>
+        </form> 
+        <div class="editbtn"><a href="/games/<%= games._id %>/edit"><input type="submit" value="Edit Game"></a></div>
+        
+    </div>
 </body>
 
 </html>
