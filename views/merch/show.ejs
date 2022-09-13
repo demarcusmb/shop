@@ -18,15 +18,14 @@
         <a href="/merch">Merch Index</a>
     </div>
     <div class="maincontent">
-        <div class="products">
-
+        <div><img src="<%= merch.img %>"></div>
+        <div class="showblock">
             <div><h2>Merch Info</h2></div>
             <div>Name: <%= merch.name %></div>
-            <div><img src="<%= merch.img %>"></div>
             <div>Description: <%= merch.description%></div>
             <div>Price: $<%= merch.price%></div>
-            <div>Quantity Available: <%= merch.qty%></div>         
-        </div>
+            <div>Quantity Available: <%= merch.qty%></div>       
+    </div>
     </div>
 
 
