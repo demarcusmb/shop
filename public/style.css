@@ -23,3 +23,24 @@
     background-color: gray;
     color: black;
 }
+
+.row{
+    display: flex;
+}
+
+.side{
+    flex: 30%;
+    background-color: blue;
+}
+
+.maincontent{
+    flex: 70%;
+    background-color: red;
+}
+
+.footer{
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+}

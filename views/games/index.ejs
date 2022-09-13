@@ -15,18 +15,28 @@
     <div class="nav">
         <a href="/">Home</a>
     </div>
-    <ul>
-        <% for(let i=0; i < games.length; i++){ %>
-            <li>
-                <a href="/games/<%= games[i]._id %>">
-                    <%= games[i].title %>
-                </a>
-            </li>
-            <% } %>
-                <li>
-                    <a href="/games/new">Add a New Game</a>
-                </li>
-    </ul>
+    <div class="row">
+        <div class="side">
+            <p>CONTENT</p>
+        </div>
+        <div class="maincontent">
+            <ul>
+                <% for(let i=0; i < games.length; i++){ %>
+                    <li>
+                        <a href="/games/<%= games[i]._id %>">
+                            <%= games[i].title %>
+                        </a>
+                    </li>
+                    <% } %>
+                        <li>
+                            <a href="/games/new">Add a New Game</a>
+                        </li>
+            </ul>
+        </div>
+    </div>
 </body>
+<div class="footer">
+    <h1> FOOTER</h1>
+</div>
 
 </html>
