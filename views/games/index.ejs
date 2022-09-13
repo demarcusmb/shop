@@ -20,14 +20,14 @@
             <p>CONTENT</p>
         </div>
         <div class="maincontent">
-            <% games.forEach(games => { %>
+            <% games.forEach(games=> { %>
                 <div class="products">
-                    Item Name:<a href="/games/<%= games._id %>">
+                    <a href="/games/<%= games._id %>">
                         <%= games.title %>
                     </a><br>
-                    <img src="<%= games.img %>"/> <br>
-                    Item Price: $<%=games.price%><br>
-                    Item Stock: <%=games.qty%>
+                    <img src="<%= games.img %>" /> <br>
+                    $<%=games.price%><br>
+                        <%=games.qty%>
                 </div>
                 <% }) %>
         </div>

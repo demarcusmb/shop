@@ -1,3 +1,6 @@
+body{
+    background-color: black;
+}
 
 .header{
     padding: 25px;
@@ -40,6 +43,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 50em;
+    background-color: white;
 }
 
 .products{
@@ -53,6 +57,7 @@
 .products img{
     border: black solid 1px;
     height: 200px;
+    width: 200px;
     width: auto;
 }
 
