@@ -29,29 +29,42 @@
 }
 
 .side{
-    flex: 30%;
+    flex: 15%;
     background-color: blue;
 }
 
 .maincontent{
     margin: auto;
-    flex: 70%;
-    background-color: red;
+    flex: 85%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 50em;
 }
 
 .products{
     margin: 10px;
     text-align: center;
+    border: black solid 3px ;
+    background-color: black;
+    color: whitesmoke;
 }
 
 .products img{
     border: black solid 1px;
     height: 200px;
     width: auto;
+}
+
+.products a{
+    color: whitesmoke;
+    text-decoration: none;
+    text-align: center;
+}
+
+.products a:hover{
+    background-color: gray;
+    color: black;
 }
 
 .footer{
