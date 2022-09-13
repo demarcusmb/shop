@@ -20,23 +20,21 @@
             <p>CONTENT</p>
         </div>
         <div class="maincontent">
-            <ul>
-                <% for(let i=0; i < games.length; i++){ %>
-                    <li>
-                        <a href="/games/<%= games[i]._id %>">
-                            <%= games[i].title %>
-                        </a>
-                    </li>
-                    <% } %>
-                        <li>
-                            <a href="/games/new">Add a New Game</a>
-                        </li>
-            </ul>
+            <% games.forEach(games => { %>
+                <div class="products">
+                    Item Name:<a href="/games/<%= games._id %>">
+                        <%= games.title %>
+                    </a><br>
+                    <img src="<%= games.img %>"/> <br>
+                    Item Price: $<%=games.price%><br>
+                    Item Stock: <%=games.qty%>
+                </div>
+                <% }) %>
         </div>
     </div>
 </body>
 <div class="footer">
-    <h1> FOOTER</h1>
+    <h1> <a href="/games/new">Add a New Game</a></h1>
 </div>
 
 </html>
