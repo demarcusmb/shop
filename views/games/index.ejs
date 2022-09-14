@@ -18,19 +18,23 @@
     </div>
     <div class="row">
         <div class="side">
-            
+
         </div>
+
         <div class="maincontent">
             <% games.forEach(games=> { %>
                 <div class="products">
-                    <a href="/games/<%= games._id %>"><%= games.title %></a><br>
-                    <img src="<%= games.img %>" /> <br>
-                    Price: $<%=games.price%><br>
+                    <a href="/games/<%= games._id %>">
+                        <%= games.title %><br>
+                            <img src="<%= games.img %>" /> <br>
+                            Price: $<%=games.price%><br>
+                    </a>
+
                 </div>
                 <% }) %>
         </div>
     </div>
-  
+
 </body>
 <div class="footer">
     <h3> <a href="/games/new">Add a New Game</a></h3>
