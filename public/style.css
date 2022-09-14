@@ -1,5 +1,7 @@
+
 body{
-    background-color: white;
+    background-color: yellow;
+    
 }
 
 .header{
@@ -7,6 +9,7 @@ body{
     text-align: center;
     background: yellow;
     color: black;
+    border-bottom: 5px #333 solid;
 }
 
 .nav{
@@ -54,7 +57,7 @@ align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: white;
+    background-color: blue;
 }
 
 .products{
@@ -66,12 +69,23 @@ align-items: center;
     background-color: rgb(0, 255, 128);
     color: black;
     width: 200px;
+    
+}
+
+.maincontent :hover{
+    transform: scale(1.1);
 }
 
 .products img{
     background-color: rgb(255, 255, 255);
     height: 72%;
     width: 20;
+    border-top: #333 2px solid;
+    border-bottom: #333 2px solid;
+}
+
+.products img:hover{
+    transform: scale(1);
 }
 
 .products a{
@@ -83,11 +97,16 @@ align-items: center;
 .products a:hover{
     background-color: yellow;
     color: black;
+    transform: scale(1);
 }
 
 .footer{
     display: flex;
-    padding: 20px;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px #333 solid;
     background-color: yellow;
     color: black;
     justify-content: space-evenly;
@@ -103,9 +122,6 @@ align-items: center;
     color: black;
 }
 
-.editbtn a:hover{
-    
-}
 
 input[type=text], select{
     width: 100%;
@@ -138,6 +154,14 @@ input[type=number],select{
 .showblock{
     display: flex;
     flex-direction: column;
+}
+
+.showcontent{
+    display: flex;
+    flex-direction: row;
+}
+.showcontent img{
+    padding-right: 50px;
 }
 
 @media screen and (max-width: 700px) {
