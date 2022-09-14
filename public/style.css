@@ -3,7 +3,7 @@
     src: url(/fonts/bBenmonoLiane.ttf);
 }
 body{
-    background-color: yellow;
+    background-color: white;
     
 }
 h1{
@@ -13,9 +13,8 @@ h1{
 .header{
     padding: 25px;
     text-align: center;
-    background: yellow;
+    background: white;
     color: black;
-    
 }
 
 .nav{
@@ -23,31 +22,34 @@ h1{
     background-color: #333;
     border-radius: 25px 25px 0px 0px;
     justify-content: space-evenly;
-    padding: 15px;
+    padding: 25px;
     box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
     transition: all .5s ease;
 }
 
 .nav a{
-    color: rgb(0, 255, 128);
+    color: red;
     text-decoration: none;
     text-align: center;
     transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
+    border-radius: 25px;
+    padding: 15px;
     box-shadow: inset 200px 0 0 0 #333;
 }
 
 .nav a:hover{
+    padding: 15px;
+    text-align: center;
     border-radius: 25px;
-    box-shadow: inset 200px 0 0 0 rgb(0, 255, 128);
-    
-    color: black;
+    box-shadow: inset 200px 0 0 0 red;
+    color: #333;
 }
 
 .pt{
     display: flex;
     justify-content: center;
     background: #333;
-    color: rgb(0, 255, 128);
+    color: red;
 }
 .forms{
 display: flex;
@@ -61,7 +63,7 @@ align-items: center;
 
 .side{
     flex: 15%;
-    background-color: rgb(0, 255, 128);
+    background-color: red;
     border-radius: 0px 0px 0px 25px;
 }
 
@@ -86,7 +88,7 @@ align-items: center;
     text-align: center;
     border: black solid 3px ;
     border-radius: 25px;
-    background-color: rgb(0, 255, 128);
+    background-color: red;
     color: black;
     width: 200px;
     box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
@@ -116,7 +118,7 @@ align-items: center;
     text-decoration: none;
     text-align: center;
     transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
-    box-shadow: inset 200px 0 0 0 rgb(0, 255, 128);
+    box-shadow: inset 200px 0 0 0 red;
 }
 
 .products a:hover{
@@ -124,7 +126,7 @@ align-items: center;
     width: 90%;
     border-radius: 25px;
     box-shadow: inset 200px 0 0 0 black;
-    color: rgb(0, 255, 128);
+    color: red;
     transform: scale(1);
 }
 
@@ -133,24 +135,28 @@ align-items: center;
     position: fixed;
     left:0;
     bottom: 0;
+    height: 6%;
     width: 100%;
     border-top: 5px #333 solid;
-    background-color: yellow;
-    color: black;
-    justify-content: center;
+    background-color: #333;
+    color: red;
+    justify-content: space-evenly;
 }
 
 .footer a{
-    color: black;
+    padding: 10px;
+    color: red;
     text-decoration: none;
     border-radius: 25px;
     transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
-    box-shadow: inset 200px 0 0 0 yellow;
+    box-shadow: inset 200px 0 0 0 #333;
 }
 
 .footer a:hover{
-    box-shadow: inset 200px 0 0 0 black;
-    color: yellow;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: inset 200px 0 0 0 red;
+    color: #333;
 }
 
 
@@ -165,7 +171,7 @@ input[type=text], select{
 }
 input[type=submit],select{
     width: 100%;
-    background-color: rgb(0, 255, 128);
+    background-color: red;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -183,16 +189,21 @@ input[type=number],select{
 }
 
 .showblock{
+    justify-content: space-evenly;
     display: flex;
     flex-direction: column;
 }
 
 .showcontent{
+    height: 100%;
     display: flex;
     flex-direction: row;
 }
+
 .showcontent img{
-    padding-right: 50px;
+    padding-right: 200px;
+    height: 100%;
+    width: 100%;
 }
 
 @media screen and (max-width: 700px) {

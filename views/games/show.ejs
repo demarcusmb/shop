@@ -25,7 +25,6 @@
                 <div class="showblock">
                     <div><h2>Game Info</h2></div>
                     <div>Title: <%= games.title %></div>
-                    
                     <div>Description: <%= games.description%></div>
                     <div>Developer: <%= games.developer%></div>
                     <div>Genres: <%= games.genres%></div>
@@ -40,7 +39,7 @@
         <form action="/games/<%= games._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Game" />
         </form> 
-        <div class="editbtn"><a href="/games/<%= games._id %>/edit"><input type="submit" value="Edit Game"></a></div>
+        <a href="/games/<%= games._id %>/edit">Edit Game</a>
         
     </div>
 </body>
