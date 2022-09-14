@@ -1,7 +1,13 @@
-
+@font-face {
+    font-family: bfont;
+    src: url(/fonts/bBenmonoLiane.ttf);
+}
 body{
     background-color: yellow;
     
+}
+h1{
+    font-family: bfont;
 }
 
 .header{
@@ -9,24 +15,31 @@ body{
     text-align: center;
     background: yellow;
     color: black;
-    border-bottom: 5px #333 solid;
+    
 }
 
 .nav{
     display: flex;
     background-color: #333;
+    border-radius: 25px 25px 0px 0px;
     justify-content: space-evenly;
     padding: 15px;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    transition: all .5s ease;
 }
 
 .nav a{
-    color: whitesmoke;
+    color: rgb(0, 255, 128);
     text-decoration: none;
     text-align: center;
+    transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
+    box-shadow: inset 200px 0 0 0 #333;
 }
 
 .nav a:hover{
-    background-color: gray;
+    border-radius: 25px;
+    box-shadow: inset 200px 0 0 0 rgb(0, 255, 128);
+    
     color: black;
 }
 
@@ -34,7 +47,7 @@ body{
     display: flex;
     justify-content: center;
     background: #333;
-    color: whitesmoke;
+    color: rgb(0, 255, 128);
 }
 .forms{
 display: flex;
@@ -49,6 +62,7 @@ align-items: center;
 .side{
     flex: 15%;
     background-color: rgb(0, 255, 128);
+    border-radius: 0px 0px 0px 25px;
 }
 
 .maincontent{
@@ -57,7 +71,12 @@ align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: blue;
+    background-color: white;
+    border-radius: 0px 0px 25px 0px;
+}
+
+.maincontent :hover{
+    transform: translate3D(0,-1px,0) scale(1.03);;
 }
 
 .products{
@@ -66,15 +85,16 @@ align-items: center;
     flex-direction: column;
     text-align: center;
     border: black solid 3px ;
+    border-radius: 25px;
     background-color: rgb(0, 255, 128);
     color: black;
     width: 200px;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    transition: all .5s ease;
     
 }
 
-.maincontent :hover{
-    transform: scale(1.1);
-}
+
 
 .products img{
     background-color: rgb(255, 255, 255);
@@ -90,13 +110,21 @@ align-items: center;
 
 .products a{
     color: black;
+    margin-left: 10px;
+    border-radius: 25px;
+    width: 90%;
     text-decoration: none;
     text-align: center;
+    transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
+    box-shadow: inset 200px 0 0 0 rgb(0, 255, 128);
 }
 
 .products a:hover{
-    background-color: yellow;
-    color: black;
+    margin-left: 10px;
+    width: 90%;
+    border-radius: 25px;
+    box-shadow: inset 200px 0 0 0 black;
+    color: rgb(0, 255, 128);
     transform: scale(1);
 }
 
@@ -109,17 +137,20 @@ align-items: center;
     border-top: 5px #333 solid;
     background-color: yellow;
     color: black;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .footer a{
     color: black;
     text-decoration: none;
+    border-radius: 25px;
+    transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
+    box-shadow: inset 200px 0 0 0 yellow;
 }
 
 .footer a:hover{
-    background-color: rgb(0, 255, 128);
-    color: black;
+    box-shadow: inset 200px 0 0 0 black;
+    color: yellow;
 }
 
 
