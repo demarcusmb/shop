@@ -14,8 +14,8 @@
         </h1>
     </div>
     <div class="nav">
-        <a href="/">Home</a>
-        <a href="/merch">Merch Index</a>
+        <h2><a href="/">Home</a></h2>
+       <h2><a href="/merch">Merch Index</a></h2> 
     </div>
     <div class="showcontent">
         <div><img src="<%= merch.img %>"></div>
@@ -35,9 +35,9 @@
         <form action="/merch/<%= merch._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Game" />
         </form>
-        <div class="editbtn">
-            <a href="/merch/<%= merch._id %>/edit"><input type="submit" value="Edit This Merch"> </a>
-        </div>
+        
+            <a href="/merch/<%= merch._id %>/edit">Edit Game</a>
+        
     </div>
 </body>
 
