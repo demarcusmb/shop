@@ -21,13 +21,14 @@
         </div>
         <div class="maincontent">
             <% merch.forEach(merch=>{ %>
-                <div class="testproducts">
+                <div class="products">
                     <a href="/merch/<%= merch._id %>">
                         <%= merch.name %>
-                    </a><br>
-                    <img src="<%= merch.img %>">
+                         <img src="<%= merch.img %>">
                     Price: $<%= merch.price %><br>
                         Quantity: <%= merch.qty %>
+                    </a><br>
+                   
                 </div>
                 <% }) %>
         </div>

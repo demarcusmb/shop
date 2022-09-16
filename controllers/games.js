@@ -21,6 +21,14 @@ router.get('/', (req, res) => {
 	});
 });
 
+router.get('/cart', (req,res)=>{
+	Game.find({}, (err,foundGames)=>{
+		res.render('games/cart.ejs', {
+			games:foundGames
+		});
+	});
+});
+
 //NEW
 router.get('/new', (req, res)=>{
 	res.render('games/new.ejs')
@@ -66,5 +74,6 @@ router.get('/:id', (req,res)=> {
 		});
 	});
 });
+
 
 module.exports = router

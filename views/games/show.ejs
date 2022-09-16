@@ -38,9 +38,11 @@
     <div class="footer">
         <form action="/games/<%= games._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Game" />
-        </form> 
-        <a href="/games/<%= games._id %>/edit">Edit Game</a>
+        </form>
         
+        <a href="/games/<%= games._id %>/edit">Edit Game</a>
+        <form action="/games/cart" method="POST">
+            <input type="submit" value="add to cart" />
     </div>
 </body>
 

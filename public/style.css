@@ -88,6 +88,8 @@ align-items: center;
 
 
 
+
+
 .products{
     margin: 5px;
     display: flex;
@@ -134,8 +136,8 @@ align-items: center;
 }
 
 .products a:hover{
-    margin-left: 10px;
-    width: 90%;
+    
+    width: 100%;
     border-radius: 25px;
     box-shadow: inset 200px 0 0 0 black;
     color: red;
