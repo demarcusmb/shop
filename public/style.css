@@ -142,6 +142,56 @@ align-items: center;
     transform: scale(1);
 }
 
+.testproducts{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: black solid 3px ;
+    border-radius: 25px;
+    background-color: red;
+    color: black;
+    width: 200px;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    transition: all .5s ease;
+    padding-bottom: 10px;
+    will-change: transform;
+    
+}
+
+
+
+.testproducts img{
+    background-color: rgb(255, 255, 255);
+    height: 72%;
+    width: 20;
+    border-top: #333 2px solid;
+    border-bottom: #333 2px solid;
+}
+
+.testproducts img:hover{
+    transform: scale(1);
+}
+
+.testproducts a{
+    color: black;
+    margin-left: 10px;
+    border-radius: 25px;
+    width: 90%;
+    text-decoration: none;
+    text-align: center;
+    transition: color .3s ease-in-out, box-shadow .5s ease-in-out;
+    box-shadow: inset 200px 0 0 0 red;
+}
+
+.testproducts a:hover{
+    margin-left: 10px;
+    width: 90%;
+    border-radius: 25px;
+    box-shadow: inset 200px 0 0 0 black;
+    color: red;
+    transform: scale(1);
+}
 
 .footer{
     display: flex;
@@ -217,11 +267,6 @@ input[type=number],select{
     padding-right: 200px;
     height: 100%;
     width: 100%;
-}
-
-.showimg img{
-    height: 600px;
-    width: 400px;
 }
 
 @media screen and (max-width: 700px) {
