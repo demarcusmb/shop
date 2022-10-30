@@ -4,6 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Jenkins Minute Pipeline'
+        npx 'mocha your-test-file.js'
+
       }
     }
 
